@@ -4,3 +4,181 @@ Author: Damien BARBIER
 Version: 1.0.0
 */
 
+
+/*
+Lien du github Page a Propos
+*/
+#linkGitHub{
+
+}
+
+
+:root{
+
+    --color1 : black;
+    --color2:  white;
+    --color3: #1b296a;
+    --color4: #ed6840;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* REGLE GENERAL */
+
+a{
+    text-decoration: none;
+}
+
+/* FIN REGLE GENERAL */
+
+/*  DEBUT MENU */
+
+.menu a{
+    padding: 1rem;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#nav-menu{
+    width: 100%;
+}
+
+.menu-top-menu-container{
+    display: flex;
+    justify-content: flex-end;
+}
+    
+
+/* FIN MENU */
+
+/* CONFIGURATION ELEMENT */
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#left-sidebar{
+    width: 20rem;
+} 
+
+main{
+    width: 114rem;
+    margin: 0 auto;
+}
+
+
+/* FIN CONFIGURATION */
+
+/* DEBUT HEADER */
+
+#main-header img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-header{
+position: relative;
+}
+
+#wrapper-header{
+  position: absolute;
+  left: 50rem;
+  top: 70rem;
+}
+
+#wrapper-header h1, #wrapper-header p {
+    color: var(--color2);
+} 
+
+#wrapper-header h1{
+    font-size: 4.8rem;
+}
+
+
+/* FIN HEADER */
+
+/* DEBUT card */
+
+#flex-index, #flex-archive{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+   
+}
+
+#flex-index{
+    margin: 0 10rem;
+    justify-content: center;
+}
+
+
+.card-date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.montheme-article-index{
+    position: relative;
+    width: 36rem;
+    max-width: 100%;
+}
+
+.montheme-article-archive{
+    width: 54rem;
+}
+
+.montheme-article-single{
+    width: 100%;
+}
+
+.custom-thumb{
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+/* FIN CARD */
+
+/*SIDEBAR */
+
+.left-sidebar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* FIN SIDEBAR */
+
+/* DEBUT FOOTER */
+
+footer{
+    width: 100%;
+}
+
+/* FIN FOOTER */

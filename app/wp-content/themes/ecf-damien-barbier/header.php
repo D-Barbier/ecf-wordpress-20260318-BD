@@ -17,11 +17,21 @@
         <?php wp_nav_menu(['theme_location' => 'top-menu']) ?>
     </nav>
 
-    <aside>
+    <aside id="left-sidebar">
         <?php
         dynamic_sidebar('left-sidebar');
         ?>
     </aside>
     
-    <main>
+
+ <main>
+    <header id="main-header">
+        <div id="wrapper-header">
+            <p>Damien BARBIER</p>
+            <h1><?php bloginfo('name')?></h1>
+            <p >Un blog qui vous fait découvrir les recoins peu connus de nos grandes viles</p>
+        </div>
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/homepage.png" alt="">
+    </header>
+   
         <!-- FIN HEADER -->

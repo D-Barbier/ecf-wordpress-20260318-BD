@@ -7,16 +7,16 @@ get_header();
 
 
 
-<section class="flex">
+<section class="flex-single">
 
     <?php
     if (have_posts()):
         while (have_posts()):
             the_post();
     ?>
-            <article class="montheme-article">
+            <article class="montheme-article-single">
 
-                <div class="card">
+                <div class="card-single">
                     <?php
 
                     if (has_post_thumbnail()) {
@@ -33,14 +33,14 @@ get_header();
 
                 <header>
                     <h1>
-                        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                         <?php the_title(); ?>
                     </h1>
                 </header>
                 <div>
-                    <?php the_excerpt(); ?>
+                    <?php the_content(); ?>
                 </div>
                 <div>
-                    <a href="<?php the_permalink() ?>"><?php the_category(); ?></a>
+                    <p>écrit par <?php the_author_link() ?> le <?php the_date() ?> dans <?php the_category(', ') ?></p>
                 </div>
             </article>
 

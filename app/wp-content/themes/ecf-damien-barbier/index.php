@@ -7,18 +7,17 @@ get_header();
 
 <h2>index</h2>
 
-<section class="flex">
+<section id="flex-index">
 
     <?php
     if (have_posts()):
         while (have_posts()):
             the_post();
     ?>
-            <article class="montheme-article">
-                <div class="card">
+            <article class="montheme-article-index">
                     <?php
 
-                    
+
                     if (has_post_thumbnail()) {
                         the_post_thumbnail('medium', ['class' => 'custom-thumb']);
                     } else {
@@ -29,7 +28,7 @@ get_header();
                     <div class="card-date">
                         <?php echo get_the_date(); ?>
                     </div>
-                </div>
+                
 
                 <header>
                     <h1>
@@ -39,7 +38,6 @@ get_header();
                 <div>
                     <?php the_excerpt(); ?>
                 </div>
-
             </article>
     <?php
         endwhile;

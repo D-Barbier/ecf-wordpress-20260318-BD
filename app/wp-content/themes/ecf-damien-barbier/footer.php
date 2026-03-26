@@ -1,6 +1,9 @@
 </main>
 <!-- DEBUT FOOTER -->
 
+<footer>
+    <p>Copyright <?php echo date('Y')?> DWWM2503 Damien BARBIER</p>
+</footer>
 
 
 

@@ -5,16 +5,14 @@ get_header();
 
 <h2>archive</h2>
 
-<section class="flex">
+<section id="flex-archive">
 
     <?php
     if (have_posts()):
         while (have_posts()):
             the_post();
     ?>
-            <article class="montheme-article">
-
-                <div class="card">
+            <article class="montheme-article-archive">
                     <?php
 
                     if (has_post_thumbnail()) {
@@ -23,18 +21,17 @@ get_header();
                         echo '<img class="custom-thumb" src="' . get_template_directory_uri() . '/images/noPhoto.webp" />';
                     }
                     ?>
-                </div>
-
                 <header>
                     <h1>
-                        <?php the_title(); ?>
+                        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                     </h1>
                 </header>
                 <div>
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
-                <div>
-                    <p>écrit par <?php the_author_link() ?> le <?php the_date() ?>dans <?php the_category(', ') ?></p>
+                  <div>
+                    <?php echo get_the_date() ?>
+                    <a href="<?php the_permalink() ?>"><?php the_category(); ?></a>
                 </div>
             </article>
 
