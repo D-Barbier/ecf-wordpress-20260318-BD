@@ -13,7 +13,15 @@
 
     <?php wp_body_open(); ?>
 
+    <nav id="nav-menu">
+        <?php wp_nav_menu(['theme_location' => 'top-menu']) ?>
+    </nav>
 
+    <aside>
+        <?php
+        dynamic_sidebar('top-menu');
+        ?>
+    </aside>
     
     <main>
         <!-- FIN HEADER -->
