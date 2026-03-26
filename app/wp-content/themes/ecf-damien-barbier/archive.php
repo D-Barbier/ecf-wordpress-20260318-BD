@@ -3,9 +3,8 @@ get_header();
 ?>
 
 
+<h2>archive</h2>
 
-
-<h2>index</h2>
 
 
 
