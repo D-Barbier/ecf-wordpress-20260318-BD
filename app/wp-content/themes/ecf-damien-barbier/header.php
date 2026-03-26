@@ -19,7 +19,7 @@
 
     <aside>
         <?php
-        dynamic_sidebar('top-menu');
+        dynamic_sidebar('left-sidebar');
         ?>
     </aside>
     
