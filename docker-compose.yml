@@ -1,9 +1,9 @@
-name: dwwm2503-wp-ecf
+name: dbarbier2-wp-ecf
 volumes:
   db_data_wp:
 services:
   wordpress_ecf_db:
-    container_name: dwwm2503-wp-ecf-db
+    container_name: dbarbier2-wp-ecf-db
     image: mariadb:11.8.5
     command: '--default-authentication-plugin=mysql_native_password'
     volumes:
@@ -11,18 +11,18 @@ services:
     restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=db_dcf_wordpress
+      - MYSQL_DATABASE=db_ecf_wordpress
       - MYSQL_USER=username
       - MYSQL_PASSWORD=password
     ports: ['3306:3306']
   wordpress:
-    container_name: dwwm2503-wp-ecf-web
+    container_name: dbarbier2-wp-ecf-web
     image: wordpress:6.9.2-php8.5-apache
-    ports: ['9000:80']
+    ports: ['8080:80']
     restart: unless-stopped
     depends_on: ['wordpress_ecf_db']
     environment:
-      - WORDPRESS_DB_HOST=wordpress_db
+      - WORDPRESS_DB_HOST=wordpress_ecf_db
       - WORDPRESS_DB_NAME=db_ecf_wordpress
       - WORDPRESS_DB_USER=username
       - WORDPRESS_DB_PASSWORD=password
